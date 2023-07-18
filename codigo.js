@@ -9,5 +9,9 @@ const consultarPais = async (e) => {
         alert("Debe ingresar el nombre de un pais");
         return;
     }
-    
+
+    const url=`https://restcountries.com/v3.1/name/${nombrePais}`;
+    const config = {
+        method: 'GET'
+    };
 }
