@@ -2,25 +2,6 @@ const API_URL = "https://restcountries.com/v3.1/";
 
 const xhr = new XMLHttpRequest();
 
-function onRequestHandler() {
-    if (this.readyState === 4 && this.status === 200) {
-        const data = JSON.parse(this.response);
-        console.log(data);
-        const pais = data[0];
-        console.log(pais.flag);
-        console.log(pais.name.common);
-        console.log(pais.population);
-        console.log(pais.capital[0]);
-        
-        document.getElementById('banderaPais').src = pais.flags.png;
-        document.getElementById('nombrePais').innerText = pais.name.common;
-        document.getElementById('poblacionPais').innerText = pais.population;
-        document.getElementById('capitalPais').innerText = pais.capital[0];
-        document.getElementById('resultado').innerText = 'Fue Encontrado';
-        document.querySelector('#tabla1').style.display = 'block';
-    }
-}
-
 xhr.addEventListener("load", onRequestHandler);
 
 const formulario = document.querySelector('form');
@@ -46,11 +27,12 @@ formulario.addEventListener('submit', async (e) => {
             const pais = data[0];
             console.log(pais.flag);
             console.log(pais.name.common);
+            console.log(pais.region);
             console.log(pais.population);
             console.log(pais.capital[0]);
             
             document.getElementById('banderaPais').src = pais.flags.png;
-            document.getElementById('nombrePais').innerText = pais.name.common;
+            document.getElementById('regionpai').innerText = pais.region;
             document.getElementById('poblacionPais').innerText = pais.population;
             document.getElementById('capitalPais').innerText = pais.capital[0];
             document.getElementById('resultado').innerText = 'Fue Encontrado';
