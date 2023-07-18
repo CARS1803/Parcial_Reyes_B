@@ -64,7 +64,9 @@
             max-width: 100px;
         }
 
-        .center-table {
+        #tabla1,
+        #tabla2,
+        #tabla3 {
             margin: 0 auto;
         }
     </style>
@@ -78,9 +80,9 @@
         <input type="text" name="pais" id="pais">
         <button type="submit">Consultar</button>
     </form>
-    <center><p id="resultado"></p></center>
+    <p id="resultado" style="text-align: center;"></p>
     
-    <table id="tabla1" style="display: none;" class="center-table">
+    <table id="tabla1" style="display: none;">
         <thead>
             <tr>
                 <th>INFORMACION</th>
@@ -111,19 +113,14 @@
     
     <br>
     
-
-
-
-    <br>
-    <center><h1>Informacion por Regiones</h1></center>
+    <h1 style="text-align: center;">Informacion por Regiones</h1>
     <form id="form">
         <input type="text" name="region" id="region">
         <button type="submit">Consultar</button>
     </form>
-    <center><p id="resultado"></p></center>
-
+    <p id="resultado" style="text-align: center;"></p>
     
-    <table id="tabla2" style="display: none;" class="center-table">
+    <table id="tabla2" style="display: none;">
         <thead>
             <tr>
                 <th>INFORMACION</th>
@@ -153,15 +150,15 @@
     
     <br>
     
-    <center><h1>Informacion por Subregiones</h1></center>
+    <h1 style="text-align: center;">Informacion por Subregiones</h1>
     
     <form id="form3">
         <input type="text" name="subregion" id="subregion">
         <button type="submit">Consultar</button>
     </form>
-    <center><p id="resultado"></p></center>
+    <p id="resultado" style="text-align: center;"></p>
     
-    <table id="tabla3" style="display: none;" class="center-table">
+    <table id="tabla3" style="display: none;">
         <thead>
             <tr>
                 <th>INFORMACION</th>
@@ -186,5 +183,5 @@
     </table>
     
     <script src="codigo.js"></script>
-</body>
+</body>  
 </html>
