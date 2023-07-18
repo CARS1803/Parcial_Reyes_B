@@ -4,17 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parcial</title>
+    <style>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #app {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            width: 200px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            padding: 5px 10px;
+            font-size: 16px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #333;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+            text-align: left;
+        }
+
+        #banderaPais {
+            max-width: 100px;
+        }
+    </style>
+    </style>
+</head>
 <body>
-    <div id="app"></div>
-    <center><h1>API PAISES</h1></center>
+    <div id="app">
+        <h1>API PAISES</h1>
+    </div>
     
     <form>
         <input type="text" name="pais" id="pais">
         <button type="submit">Consultar</button>
     </form>
-    <p id="resultado"></p>
+    <center><p id="resultado"></p></center>
 
-    <table border="1 px solid">
+    <table id="tabla1" style="display: none;">
         <thead>
             <tr>
                 <th>INFORMACION</th>
@@ -23,20 +84,63 @@
         </thead>
         
         <tbody>
-
-            <tr>
-                <td>BANDERA</td>
-                <td> <img src="" alt="" id="banderaPais"></td>
-            </tr>
-
             <tr>
                 <td>PAIS</td>
                 <td id="nombrePais"></td>
             </tr>
-
+            
             <tr>
-                <td>POBLACION</td>
+                <td>CAPITAL</td>
+                <td id="capitalPais"></td>
+            </tr>
+            <tr>
+                <td>BANDERA</td>
+                <td> <img src="" alt="" id="banderaPais"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <center><h1>Poblacion</h1></center>
+    <table>
+        <thead>
+            <tr>
+                <th>INFORMACION</th>
+                <th>RESULTADO</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>Poblacion Aproximada</td>
                 <td id="poblacionPais"></td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <br>
+    <center><h1>Informacion por Regiones</h1></center>
+    <form id="form">
+        <input type="text" name="region" id="region">
+        <button type="submit">Consultar</button>
+    </form>
+    <center><p id="resultado"></p></center>
+
+    
+    <table id="tabla2" style="display: none;">
+        <thead>
+            <tr>
+                <th>INFORMACION</th>
+                <th>RESULTADO</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>CONTINENTE</td>
+                <td id="continentePais"></td>
             </tr>
 
             <tr>
@@ -45,8 +149,8 @@
             </tr>
 
             <tr>
-                <td>CAPITAL</td>
-                <td id="capitalPais"></td>
+                <td>SUBREGION</td>
+                <td id="subregionPais"></td>
             </tr>
 
         </tbody>
