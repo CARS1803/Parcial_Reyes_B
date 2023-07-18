@@ -32,7 +32,8 @@ formulario.addEventListener('submit', async (e) => {
             console.log(pais.capital[0]);
             
             document.getElementById('banderaPais').src = pais.flags.png;
-            document.getElementById('regionpai').innerText = pais.region;
+            document.getElementById('regionPais').innerText = pais.region; // Corrección en el ID
+            document.getElementById('nombrePais').innerText = pais.name.common;
             document.getElementById('poblacionPais').innerText = pais.population;
             document.getElementById('capitalPais').innerText = pais.capital[0];
             document.getElementById('resultado').innerText = 'Fue Encontrado';
@@ -65,7 +66,7 @@ formulario2.addEventListener('submit', async (e) => {
             console.log(pais.continents[0]);
             console.log(pais.subregion);
             
-            document.getElementById('regionPais').innerText = pais.region;
+            document.getElementById('regionPai').innerText = pais.region;
             document.getElementById('continentePais').innerText = pais.continents[0];
             document.getElementById('subregionPais').innerText = pais.subregion;
             document.getElementById('resultado').innerText = 'Fue Encontrado';
