@@ -60,7 +60,13 @@
         #banderaPais {
             max-width: 100px;
         }
-    </style>
+        #escudo {
+            max-width: 100px;
+        }
+
+        .center-table {
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
@@ -74,7 +80,7 @@
     </form>
     <center><p id="resultado"></p></center>
     
-    <table id="tabla1" style="display: none;">
+    <table id="tabla1" style="display: none;" class="center-table">
         <thead>
             <tr>
                 <th>INFORMACION</th>
@@ -106,23 +112,7 @@
     <br>
     
 
-    <center><h1>Poblacion</h1></center>
-    <table>
-        <thead>
-            <tr>
-                <th>INFORMACION</th>
-                <th>RESULTADO</th>
-            </tr>
-        </thead>
-        
-        <tbody>
-            <tr>
-                <td>Poblacion Aproximada</td>
-                <td id="poblacionPais"></td>
-            </tr>
-            
-        </tbody>
-    </table>
+
 
     <br>
     <center><h1>Informacion por Regiones</h1></center>
@@ -133,7 +123,7 @@
     <center><p id="resultado"></p></center>
 
     
-    <table id="tabla2" style="display: none;">
+    <table id="tabla2" style="display: none;" class="center-table">
         <thead>
             <tr>
                 <th>INFORMACION</th>
@@ -143,22 +133,58 @@
         
         <tbody>
             <tr>
-                <td>CONTINENTE</td>
-                <td id="continentePais"></td>
-            </tr>
-
-            <tr>
                 <td>REGION</td>
                 <td id="regionPai"></td>
             </tr>
-
             <tr>
                 <td>SUBREGION</td>
                 <td id="subregionPais"></td>
             </tr>
-
+            <tr>
+                <td>CONTINENTE</td>
+                <td id="continentePais"></td>
+            </tr>
+            <tr>
+                <td>EXTENSION TERRITORIAL</td>
+                <td id="areaPais"></td>
+            </tr>
         </tbody>
     </table>
+    
+    <br>
+    
+    <center><h1>Informacion por Subregiones</h1></center>
+    
+    <form id="form3">
+        <input type="text" name="subregion" id="subregion">
+        <button type="submit">Consultar</button>
+    </form>
+    <center><p id="resultado"></p></center>
+    
+    <table id="tabla3" style="display: none;" class="center-table">
+        <thead>
+            <tr>
+                <th>INFORMACION</th>
+                <th>RESULTADO</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>POBLACION</td>
+                <td id="poblacionPais"></td>
+            </tr>
+            <tr>
+                <td>UBICACION</td>
+                <td id="ubicacionPais"></td>
+            </tr>
+            <tr>
+                <td>ESCUDO DE ARMAS</td>
+                <td> <img src="" alt="" id="escudo"></td>
+            </tr>
+        </tbody>
+    </table>
+    
     <script src="codigo.js"></script>
 </body>
 </html>
